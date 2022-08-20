@@ -1,0 +1,325 @@
+<!DOCTYPE html>
+
+<html lang="pt-br">
+<head>
+	<meta charset="UTF-8">
+	<title>ColdRosa</title>
+	<link rel="stylesheet" href="./assets/css/Style-site.css">
+	<link rel="stylesheet" href="./assets/css/reset.css">
+	<link rel="preconnect" href="https://fonts.googleapis.com">
+</head>
+
+<body>
+	<header>
+		<h1><a href="index.html"><img src="./assets/img/logo-site.png" alt="" ></a></h1>
+	</header>
+
+	<main>
+
+		<h2 class="titulo">Site</h2>
+
+			<p>Agora vamos aprender a fazer um simples site. Vamos usar o HTML e o CSS3, para começar precisamos de algum aplicativo onde iremos escrever o código. Aqui usaremos o Sublime Text 3, o link para baixar pode ser encontrado abaixo.</p>
+
+			<a class="a" href="https://www.sublimetext.com/3">Sublime Text</a>
+
+			<p>Para começar nós iremos criar 2 arquivos dentro do sublime, é bom salvar os dois em uma pasta, um dos arquivos deve ser chamado de "index.html" e o outro de "style.css".</p>
+
+			<h3 class="titulo"><b class="cor">Parte 1.</b> <b class="cor2">Código simples.</b></h3>
+
+			<hr>
+			<img src="./assets/img/site1.png" alt="">
+			<hr>
+
+			<p>Vamos começar com o código simples do site, o que vai ajudar o navegador a rodar o site perfeitamente, todas as tags que vão ser utilizadas devem estar entre < >, e toda tag de conteúdo deve abrir em < > e fechar em </> no final do conteúdo. </p>
+
+			<p>Para começar vamos usar a Tag < !DOCTYPE html > essa tag serve para informar ao navegador qual versão do HTML nós vamos usar, se colocar apenas html ele vai usar a versão mais atualizada do HTML.</p>
+
+			<p>Depois vamos usar a tag < html lang="pt-br"> a tag html é uma tag de conteúdo, ou seja ela deve ser fechada, então vamos usar < /html >, todo nosso código vai ficar dentro da tag do html. </p>
+
+			<p>Agora vamos criar duas tags, a tag < head > que deve ser fechada com < /head > e embaixo a tag < body > que também deve ser fechado com < /body >, o conteúdo de dentro do head vai ser a cabeça do site, onde vamos colocar as informações para o navegador ler, e o body é onde vai ficar o conteúdo da página, o lugar onde vai estar as coisas que vão aparecer diretamente na página.</p>
+
+			<h4 class="titulo"><b class="cor">Parte 2.</b> <b class="cor2"> Head.</b></h4>
+
+			<hr>
+			<img src="./assets/img/site2.png" alt="">
+			<hr>
+
+			<p>Agora vamos ver as tags que podem ser usadas no head, dentro do head nós vamos colocar < meta charset="UTF-8">, é uma tag meta utilizada para comunicar aos navegadores qual é o formato de codificação de caracteres utilizado naquele documento. </p>
+
+			<p>A tag < title> é onde vai ficar o nome de nossa página, que deve ser fechada com < /titulo></p>
+
+			<p>Agora vamos ligar o arquivo do HTML com o CSS3, para isso vamos usar a atg < link rel="stylesheet" href="style.css">, isso serve para ligarmos o nosso HTML com o CSS3 para facitar na hora de fazer o nosso código.</p>
+
+			<h5 class="titulo"> <b class="cor">Parte 3.</b> <b class="cor2"> Código do Body.</b></h5>
+
+			<hr>
+			<img src="./assets/img/site3.png" alt="">
+			<hr>
+
+			<p>Dessa vez vamos mexer dentro da tag Body, primeiro vamos fazer o cabeçalho do nosso site, que é onde fica o primeiro conteúdo da página. Dentro da tag body nós iremos criar uma nova tag chamada < header> e vamos fechar ele com < /header >.</p>
+
+			<p>Dentro do header nós iremos criar nosso cabeçalho, vamos criar a tag < h1 > dentro do header e como sempre em tag de conteúdo devemos fechalo com < /h1>, a tag h1 marca o titulo, cada titulo deve ter uma numeração diferente, h1,h2,h3,h4,h5... Dentro do h1 nós vamos colocar o nome de nosso site.</p>
+
+			<h6 class="titulo"><b class="cor">Parte 4.</b> <b class="cor2"> Conteúdo do body.</b></h6>
+
+			<hr>
+			<img src="./assets/img/site4.png" alt="">
+			<hr>
+
+			<p>Dentro do body abaixo do header, vamos primeiro criar o titulo, vamos usar a tag < h2> e dentro dele você pode botar o título que você quer para seu site.</p>
+
+			<p>Após isso vamos usar a tag < p> logo abaixo, a tag p significa paragrafo, ela é uma tag de conteúdo então deve ser fechada depois de escrevermos o que queremos no paragrafo.</p>
+
+			<h6 class="titulo"><b class="cor">Parte 5.</b> <b class="cor2"> Adicionando imagens no site.</b></h6>
+
+			<hr>
+			<img src="./assets/img/site5.png" alt="">
+			<hr>
+
+			<p>Para nós adicionarmos uma imagem em nosso site é só usarmos a tag < img src="">. Além disso precisamos colocar a imagem que querenos dentro da pasta onde esta o html e o css3 e ele precisa estar ou em png ou jpg, caso o nome da imagem seja banner e ele esteja em jpg, dentro das áspas do src devemos colocar "banner.png".</p>
+
+			<p>Assim adicionamos uma imagem em nosso site. Para mexer na largura ou posição dele nós iremos usar o CSS3 para mexer no estilo de nossa página.</p>
+
+			<h6 class="titulo"><b class="cor">Parte 6.</b> <b class="cor2"> Mexendo no CSS3.</b> </h6>
+
+			<hr>
+			<img src="./assets/img/site6.png" alt="">
+			<hr>
+
+			<p>Agora vamos partir para o CSS3, no arquivo chamado style.css que criamos, dentro dele nós iremos colocar as mesmas tags que usamos no css para configura-los, primeiro a nossa imagem utilizando o código abaixo.</p>
+
+			<ul>
+				<li>Vamos usar ó código abaixo</li>
+				<li>img {</li>
+				<li> width: 100%;</li>
+				<li> heigth: 350px;</li>
+				<li>}</li>
+			</ul>
+
+			<p>No Css3 podemos usar alguns tipos para medir as coisas, como a %, px que são pixels e etc. Existem outros tipos mas por enquanto vamos usar esses dois. A tag width é a largura de nossa imagem, usando o 100% ela vai ocupar 100% da largura de nossa página, e o height é para alterar a altura da imagem, que fica a sua escolha se vai querer alterar ou não.</p>
+
+			<p>Agora para mexermos no titulo e nos paragrafos vamos usar:</p>
+
+			<ul>
+				<li>h2 {</li>
+				<li>text-align: center;</li>
+				<li>}</li>
+				<li>e</li>
+				<li>p {</li>
+				<li>text-align: center;</li>
+				<li>}</li>
+			</ul>
+
+			<p>O text-align serve simplesmente para centralizar o nosso texto no site. É uma configuração fácil e boa para um site simples.</p>
+
+			<h6 class="titulo"> <b class="cor">Parte 7.</b> <b class="cor2">Reset.css.</b></h6>
+
+			<hr>
+			<img src="./assets/img/site7.png" alt="">
+			<hr>
+
+			<p>Vamos adicionar o Reset.css em nosso código, o reset basicamente tira todas as configurações que o navegador faz para nós, essas configurações normalmente apenas nos atrapalham do que nos ajudam.</p>
+
+			<p>Para fazermos isso vamos criar um novo arquivo, salva-lo como "Reset.css" dentro da pasta do nosso site, dentro dele vamos colocar o código abaixo.</p>
+
+			<ul>
+				<li>/* http://meyerweb.com/eric/tools/css/reset/ </li>
+				<li>  v2.0 | 20110126</li>
+				<li>   License: none (public domain)</li>
+				<li>*/</li>
+				<li>html, body, div, span, applet, object, iframe,</li>
+				<li>h1, h2, h3, h4, h5, h6, p, blockquote, pre,</li>
+				<li>a, abbr, acronym, address, big, cite, code,</li>
+				<li>del, dfn, em, img, ins, kbd, q, s, samp,</li>
+				<li>small, strike, strong, sub, sup, tt, var,</li>
+				<li>b, u, i, center,</li>
+				<li>dl, dt, dd, ol, ul, li,</li>
+				<li>fieldset, form, label, legend,</li>
+				<li>table, caption, tbody, tfoot, thead, tr, th, td,</li>
+				<li>article, aside, canvas, details, embed, </li>
+				<li>figure, figcaption, footer, header, hgroup,</li>
+				<li>menu, nav, output, ruby, section, summary,</li>
+				<li>time, mark, audio, video {</li>
+				<li>margin: 0;</li>
+				<li>padding: 0;</li>
+				<li>border: 0;</li>
+				<li>font-size: 100%;</li>
+				<li>font: inherit;</li>
+				<li>vertical-align: baseline;</li>
+				<li>}</li>
+				<li>/* HTML5 display-role reset for older browsers */</li>
+				<li>article, aside, details, figcaption, figure, </li>
+				<li>footer, header, hgroup, menu, nav, section {</li>
+				<li>	display: block;</li>
+				<li>}</li>
+				<li>body {</li>
+				<li>	line-height: 1;</li>
+				<li>}</li>
+				<li>ol, ul {</li>
+				<li>	list-style: none;</li>
+				<li>}</li>
+				<li>blockquote, q {</li>
+				<li>	quotes: none;</li>
+				<li>}</li>
+				<li>blockquote:before, blockquote:after,</li>
+				<li>q:before, q:after {</li>
+				<li>	content: '';</li>
+				<li>	content: none;</li>
+				<li>}</li>
+				<li>table {</li>
+				<li>	border-collapse: collapse;</li>
+				<li>	border-spacing: 0;</li>
+				<li>}</li>
+			</ul>
+
+			<p>Vamos apenas copiar e colar esse código dentro do Reset.css. Depois disso, acima do link do style.css, nós iremos colocar mais um link mas dessa vez para o Reset.css.</p>
+
+			<p>< link rel="stylesheet" href="Reset.css"></p>
+
+			<h6 class="titulo"><b class="cor">Parte 8.</b> <b class="cor2">Melhorando o CSS3.</b></h6>
+
+			<hr>
+			<img src="./assets/img/site8.png" alt="">
+			<hr>
+
+			<p>Vamos melhorar o estilo de nossa página, primeiro vamos mexer com o cabeçalho, dentro do css3 vamos colocar "header h1 {" dentro dele vamos colocar o código abaixo.</p>
+
+			<ul>
+				<li>header h1 {</li>
+				<li>font-size: 30px;</li>
+				<li>padding: 10px 20px 0;</li>
+				<li>}</li>
+			</ul>
+
+			<p>Assim nós iremos aumentar a fonte do nosso cabeçalho pra 30 pixels. A tag padding é o espaçamento do nosso elemento, o primeiro numero é para cima, o segundo é para a esquerda e o terceiro para a direita.</p>
+
+			<p>Agora devolta ao h2 nós vamos adicionar algumas coisas nele.</p>
+
+			<ul>
+				<li>h2 {</li>
+				<li>text-align: center;</li>
+				<li>padding-top: 10px;</li>
+				<li>font-size: 25px;</li>
+				<li>}</li>
+			</ul>
+
+			<p>Assim aumentaremos o tamanho da fonte de nosso título e colcaremos um espaçamento para cima de 10 pixels.</p>
+
+			<p>E por ultimo vamos melhorar o código dos nosso paragrafos.</p>
+
+			<ul>
+				<li>p {</li>
+				<li>text-align: center;</li>
+				<li>margin: 10px 30px 10px;</li>
+				<li>}</li>
+			</ul>
+
+			<p>A tag margin serve apenas para darmos uma margem no nosso texto, o primeiro numero é para cima, o segundo é para a esquerda e o terceiro é para a esquerda.</p>
+
+			<h6 class="titulo"><b class="cor">Parte 9.</b> <b class="cor2">Cor de fundo.</b></h6>
+
+			<hr>
+			<img src="./assets/img/site9.png" alt="">
+			<hr>
+
+			<p>Uma parte bem rápida para ensinar a botar uma cor no fundo do nosso site, o HTML consegue identificar vários jeitos de colocar uma cor, como o Hex, RBG e assim vai, para colocarmos uma cor no nosso site, nós iremos dentro no style.css e vamos colocar o código abaixo.</p>
+
+			<ul>
+				<li>body {</li>
+				<li> background: #CCCCCC</li>
+				<li>}</li>
+			</ul>
+
+			<p>Assim a cor da nossa página vai ficar cinza, a tag background faz isso para nós. Caso queira outra cor, você pode navegar pela internet procurando cores Hex ou RGB, pode usar o site abaixo para ver as cores Hex. <a id="celke" class="a" href="https://celke.com.br/artigo/tabela-de-cores-html-nome-hexadecimal-rgb">Celke</a></p>
+
+
+
+
+
+			<h6 class="titulo"><b class="cor">Parte 10.</b> <b class="cor2">Nova sessão.</b></h6>
+
+			<hr>
+			<img src="./assets/img/site10.png" alt="">
+			<hr>
+
+			<p>Vamos criar uma nova sessão, um novo titulo e fazer uma pequena lista para adicionarmos no nosso site.</p>
+
+			<p>Como mostrado antes, para fazer um titulo nós utilizamos o < h1>, já existe um h1 e um h2 então o nosso próximo titulo precisamos colocar < h3>, no site do tutorial vamos colocar o titulo de Beneficios.</p>
+
+			<p>Agora vamos criar uma pequena lista para nosso site. Para criar uma lista utilizamos a tag < ul> que é uma tag que precisamos fechar < /ul> e dentro dele para criarmos os itens da nossa lista usamos a tag < li> que também é precisa fechar < /li>. Vamos usar:</p>
+
+			<ul>
+				<li>< ul></li>
+				<li>< li> Texto < /li> </li>
+				<li>< li> Texto < /li> </li>
+				<li>< /ul></li>
+			</ul>
+
+			<h6 class="titulo"> <b class="cor">Parte 11.</b> <b class="cor2">Arrumando a nova sessão no CSS3</b></h6>
+
+			<hr>
+			<img src="./assets/img/site11.png" alt="">
+			<hr>
+
+			<p>Agora no CSS3 vamos primeiro mexer no nosso titulo, onde foi criado o h2 podemos simplesmente colocar uma , e botar o h3 do lado assim como mostrado abaixo.</p>
+
+			<ul>
+				<li>h2, h3 {</li>
+				<li>text-align: center; </li>
+				<li>padding-top: 10px;</li>
+				<li>font-size: 25px;</li>
+				<li>}</li>
+			</ul>
+
+			<p>Podemos adicionar um elemento com a mesma configuração de outro simplesmente botando uma virgula e botando o elemento que queremos copiar a configuração.</p>
+
+			<p>Agora para mexermos na nossa lista, vamos colocar o ul no Css3.</p>
+
+			<ul>
+				<li>ul {</li>
+				<li>padding: 20px 20px 20px;</li>
+				<li>font-size: 17px;</li>
+				<li>text-align: center;</li>
+				<li>}</li>
+			</ul>
+
+			<p>Assim nós iremos dar um espaçamento de nossos elementos, colocar uma fonte de 17 pixels e centralizar a nossa lista.</p>
+
+			<hr>
+			<hr>
+
+			<section id="degrade">
+			<h6 class="titulo"> <b class="cor">CONC</b><b class="cor2">LUSÃO</b> </h6>
+			 <p>Assim o nosso site está praticamente pronto, tem muitas coisas que podem ser adicionadas, mas esse é um site simples então não vamos adicionar muitas coisas.</p>
+
+			 <p>Muito obrigado se você lêu até aqui, espero que tenha conseguido entender e que tenha conseguido fazer o Site, caso tenha alguma duvida ou reclamação entre em contato com o nosso E-mail.</p>
+
+			 <p>Email: ColdRosaContact@gmail.com</p>
+
+			 <p>Confira também:</p>
+
+			 <a class="a" href="ping-pong.html">Ping-Pong</a>
+			 <a  class="a" href="JogoCobrinha.html">Snake Game</a>
+			 </section>
+
+
+
+
+
+
+
+	</main>
+
+
+
+
+	<footer>
+		<img src="./assets/img/copyright-site.png" alt="">
+		<p>&copy; Copyright ColdRosa - 2022</p>
+
+	</footer>
+
+
+</body>
+
+</html>

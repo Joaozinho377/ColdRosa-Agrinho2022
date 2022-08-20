@@ -1,0 +1,118 @@
+body {
+	font-family: 'Montserrat', sans-serif;
+	background: rgb(24, 24, 24);
+}
+
+main {
+	box-shadow: inset 10px 10px 20px #212121;
+}
+
+main .cor {
+	color: #ffaec8;
+}
+
+main .cor2 {
+ color: #8cfffb;
+
+}
+
+header {
+	background: rgb(33, 33, 33);
+}
+
+header img {
+	width: 35%;
+	height: 70%;
+	margin-left: 375px;
+}
+
+main .titulo {
+	color: #ffffff;
+	font-size: 25px;
+	padding: 30px 80px 30px;
+}
+
+main p {
+	text-align: justify;
+	color: #ffffff;
+	padding: 0px 40px 20px;
+	margin-right: 100px;
+	margin-left: 100px;
+	font-size: 20px;
+	padding-top: 20px;
+
+}
+
+ main hr {
+	width: 80%;
+	height: 3px;
+}
+
+main img {
+	width: 50%;
+	margin-left: 300px;
+}
+
+main em {
+	font-weight: bold;
+}
+
+main ul {
+	text-align: justify;
+	color: #ffffff;
+	padding: 0px 40px 20px;
+	margin-right: 100px;
+	margin-left: 100px;
+	font-size: 20px;
+
+}
+
+
+
+main li {
+	padding-top: 10px;
+}
+
+
+main a {
+	font-size: 20px;
+	color: #ffc0cb;
+	text-decoration: none;
+	font-weight: bold;
+}
+
+main a:before {
+	content: "➔"
+}
+
+
+#degrade {
+	background: linear-gradient(#181818, #212121);
+}
+
+
+
+
+#final {
+	padding-top: 40px;
+}
+
+
+
+
+footer {
+	background: rgb(33, 33, 33);
+}
+
+footer img {
+	padding-top: 50px;
+	width: 10%;
+	position: relative;
+	left: 550px;
+
+}
+
+footer p {
+	text-align: center;
+}
+

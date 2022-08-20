@@ -1,0 +1,336 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+	<meta charset="UTF-8">
+	<title>ColdRosa</title>
+	<link rel="stylesheet" href="./assets/css/style-pingpong.css">
+	<link rel="stylesheet" href="./assets/css/reset.css">
+	<link rel="preconnect" href="https://fonts.googleapis.com">
+</head>
+
+<body>
+	<header>
+		<h1 class="pingpong"><a href="index.html"><img src="./assets/img/Logo-ping.png" alt="" ></a></h1>
+	</header>
+
+	<main>
+		<h1 class="titulo"><b class="cor">Ping</b> <b class="cor2">Pong</b></h1>
+
+		<p>Para começar a fazer o jogo no JavaScript, nós iremos usar o site do <a href="https://editor.p5js.org">p5.js</a>, que é mais facil de ser utilizado e mais facil para ver o resultado do código. O jogo vai ser dividido em partes, então para começar vamos explicar o simples sobre o código do JavaScript.
+
+			<h2 class="titulo"><b class="cor">Parte 1.</b> <b class="cor2">Código simples</b></h2>
+			<hr>
+			<img src="./assets/img/pingpong1.png" alt="">
+			<hr>
+
+		<p>Como podemos ver acima, o p5.js já deixa esse pequeno código preparado para nos ajudar no começo. Para começar devemos entender o código que está escrito acima, a tag <em>"function"</em> ela serve para criar uma função especifica que é bom para deixar o código mais organizado. o <em>"setup"</em> é como a base do jogo. <em>createCanvas</em> é como se fosse a resolução do jogo, a tela onde vai acontecer o jogo. Draw serve para "desenhar" as coisas que vão ser postas no código, que é onde vai ser posto as coisas que estarão dentro do jogo. E por ultimo o <em>background</em>, que é a cor de fundo onde vai acontecer o jogo. </p>
+
+		<p>O JavaScript tem algumas regras simples que precisamos seguir para que tudo ocorra perfeitamente. Para começar todos os códigos devem começar com letra minúscula e a segunda letra tem que ser maiúscula. Por exemplo: xBolinha. </p>
+
+		<h3 class="titulo"><b class="cor">Parte 2.</b> <b class="cor2">Mexendo no código simples</b></h3>
+
+		<hr>
+		<img src="./assets/img/pingpong2.png" alt="">
+		<hr>
+
+		<p>Agora para começarmos a mexer nesse código simples, vamos para o createCanvas, como dito acima, é a tag que faz o tamanho da tela do jogo, no tutorial usaremos a resolução de 600x400, para fazer isso é só colocar o tamanho que queira dentro dos ( ) que estão logo após do createCanvas, para colocar no 600x400 é só colocar (600, 400).</p>
+
+		<p>Agora o background, ele é a tag que vai ser colocado a cor de fundo do nosso jogo, o background usa a cor RGB e pode encontrar facilmente as cores na internet, no tutorial vamos usar a cor preta, para colocar a cor é só colocar o numero 0 dentro dos ( ). pode ser usado outras cores para o fundo, por exemplo caso queira a cor verde, basta por (0,100,0).</p>
+
+		<p> Site para pegar as cores RGB <a href="https://celke.com.br/artigo/tabela-de-cores-html-nome-hexadecimal-rgb">Celke</a></p>
+
+		<h4 class="titulo"> <b class="cor">Parte 3.</b> <b class="cor2">Bolinha</b></h4>
+
+		<hr>
+		<img src="./assets/img/gif-pingpong3.gif" alt="">
+		<hr>
+
+		<p>Agora que temos a nossa tela do jogo e a cor da nossa tela, vamos começar a fazer a bolinha. Mas antes é bom ficar testando o jogo a cada código que é colocado, para que caso dê algum erro no código, ele fique mais simples de ser arrumado</p>
+
+		<p>Para começar a fazer a bolinha primeiro vamos criar uma nova função que vai ter o trabalho de fazer a bolinha, cada função precisa ter um nome, nós usaremos o nome "bolinha", então para começar vamos escrever abaixo do ultimo }, function bolinha () {}, dentro dos {} é onde vai ficar o código da bolinha que no Java é escrito como <em>circle</em>. Dentro dos {} da function bolinha iremos escrever circle( ),
+		dentro dos ( )  é onde vai ficar as especifiaçõs da bolinha, onde o primeiro numero é o X da bolinha, o segundo é o Y e o terceiro é o diametro da bolinha</p>
+
+		<p>O código pode ser:
+			function bolinha() {
+		    circle (300, 165, 20)
+		}</p>
+
+		<p>E para terminar, o nome da função deve ir dentro da função <em>draw</em> logo abaixo do background</p>
+
+		<h5 class="titulo"><b class="cor">Parte 4.</b> <b class="cor2">Variaveis e Biblioteca</b></h5>
+
+		<hr>
+		<img src="./assets/img/pingpong4.png" alt="">
+		<hr>
+
+		<p>As variáveis são utilidades que vão ajudar a organizar o código e ficar mais fácil de ler, vamos trocar os numeros da bolinha por variáveis, para isso no topo do código vamos escrever <em>let</em> que é o que vai criar a variavel, aí o nome da variavel que vamos botar xBolinha (lembrando que a primeira letra sempre tem que ser em minúsculo), depois do nome precisa botar um = e o numero que foi posto no x da bolinha.</p>
+
+		<ul>
+			<li>let xBolinha= 300;</li>
+			<li>let yBolinha= 165;</li>
+			<li>let diametro= 20;</li>
+		</ul>
+
+		<p>após isso basta substituir os numeros colocado na tag <em>circle</em> pelo nome das variáveis.</p>
+
+		<p>circle (xBolinha, yBolinha, diametro)</p>
+
+		<p>É assim que faz para criar as variáveis para o código, é muito bom usarmos bastente das variáveis para deixar o código bem mais fácil de ler e também para deixa-lo mais organizado. Além das variáveis também vamos falar sobre a biblioteca do p5.js, que é onde mostra todas as tags que podemos usar em nosso código, é recomendado que você dê uma boa explorada nela, para que você entenda melhor de como funciona as tags do JavaScript.</p>
+
+		<h6 class="titulo"><b class="cor">Parte 5.</b> <b class="cor2">Movimentação</b> </h6>
+
+		<hr>
+		<img src="./assets/img/gif-pingpong5.gif" alt="">
+		<hr>
+
+		<p>Agora que foi explicado sobre as variáveis e a biblioteca, vamos para a movimentação da bolinha. Para fazer essa movimentação, vamos denovo criar uma função. Criando uma função e botando um nome nela, que no tutorial usaremos movimento, dentro dos {} colocaremos o X da bolinha + o quanto queremos que ela se movimente. Por exemplo:</p>
+
+		<ul>
+			<li>xBolinha += 3;</li>
+			<li>yBolinha +- -3;</li>
+		</ul>
+
+		<p>Para deixar mais fácil vamos criar mais duas variáveis que vão ficar no lugar do 3 e o -3, chamados velocidadeXBolinha e velocidadeYBolinha. E denovo para botar essa função em ação devemos botar ela denovo na função draw. Assim terminando a movimentação da bolinha.</p>
+
+		<h6 class="titulo"><b class="cor">Parte 6.</b> <b class="cor2">colisão</b> </h6>
+
+		<hr>
+		<img src="./assets/img/pingpong6.png" alt="">
+		<hr>
+
+		<p>Agora para fazer a colisão da bolinha nas bordas da tela, primeiro precisamos do raio da bolinha, para isso criaremos mais uma variável.</p>
+
+		<p>let raio= diametro /2;</p>
+
+		<p>Agora para começarmos vamos criar mais uma função, chamada colisao, e dentro dessa função nós vamos usar a tag <em>if</em>. Confira o código abaixo</p>
+
+		<ul>
+			<li>  if (xBolinha + raio> width ||</li>
+			<li>  xBolinha - raio< 0){</li>
+			<li>  velocidadeXBolinha *= -1;</li>
+			<li>}</li>
+			<li>if (yBolinha + raio> height ||</li>
+			<li>   yBolinha - raio< 0){</li>
+			<li>  velocidadeYBolinha *= -1;</li>
+			<li>}</li>
+			<li>}</li>
+		</ul>
+
+			<p>Vamos explicar esse código por partes. primeiro se o X da bolinha mais o raio for maior que largura máxima da tela ou se o X da bolinha mais o raio for menor que 0 a velocidadeXBolinha vai ser multiplicada por -1, fazendo com que ele mude de direção</p>
+
+			<p>E o segundo if, traduzindo o código é. Se o Y da bolinha mais o radio for maior a altura máxima da tela ou se o Y da bolinha mais o raio for menor que 0 a velocidadeYBolinha vai ser multiplicada por -1, também fazendo com que ela mude de direção</p>
+
+			<p>E como sempre. precisamos botar a função da colisão a função draw.</p>
+
+			<h6 class="titulo"> <b class="cor">Parte 7.</b> <b class="cor2">Raquete</b> </h6>
+
+			<hr>
+			<img src="./assets/img/pingpong7.png" alt="">
+			<hr>
+
+			<p>Agora vamos começar a fazer a nossa raquete, denovo como sempre vamos criar mais uma função, chamada raquete dentro dela usaremosa tag <em>rect</em> e igual a bolinha elas são parecidas na hora de dar as especificações. dentro dos ( ) do rect iremos botar (X da raquete, Y da raquete, largura da Raquete, altura da raquete ). </p>
+
+			<p>Para facilitar, vamos criar 4 variáveis, um para o X da raquete, um para o Y da raquete, um para a largura da raquete e mais um para a altura da raquete. pode ser colocado como citado abaixo.</p>
+
+			<ul>
+				<li>let xRaquete= 3;</li>
+				<li>let yRaquete = 170;</li>
+				<li>let larguraRaquete= 10;</li>
+				<li>let alturaRaquete= 75;</li>
+			</ul>
+
+			<p>Assim podemos substituir os numeros no rect pelas variáveis que foram criadas. E para finalizar devemos botar a função da raquete dentro na função draw.</p>
+
+			<h6 class="titulo"> <b class="cor">Parte 8.</b> <b class="cor2">Raquete inimiga</b></h6>
+
+			<hr>
+			<img src="./assets/img/pingpong8.png" alt="">
+			<hr>
+
+			<p>A raquete inimiga é o mesmo processo da nossa raquete, é só criar mais uma função chamada raqueteInimiga, colocar o rect e botar as especificações.</p>
+
+			<p>Vamos criar mais duas variáveis, uma chamada xRaqueteInimiga e outra yRaqueteInimiga como mostrado abaixo. </p>
+
+			<ul>
+				<li>let xRaqueteInimiga= 585;</li>
+				<li>let yRaqueteInimiga= 160;</li>
+			</ul>
+
+			<p>E na tag rect podemos colocar.</p>
+
+			<p>rect (xRaqueteInimiga, yRaqueteInimiga, larguraRaquete, alturaRaquete)</p>
+
+			<p>E para finalizar, precisamos botar a função da raqueteInimiga na função draw como sempre.</p>
+
+			<h6 class="titulo"><b class="cor">Parte 9.</b> <b class="cor2">Movimento da Raquete.</b></h6>
+
+			<hr>
+			<img src="./assets/img/pingpong9.png" alt="">
+			<hr>
+
+			<p>Agora vamos criar a movimentação da nossa raquete, vamos criar uma função chamada movimentoRaquete, e dentro dessa função iremos usar a tag if novamente e também a tag keyIsDown. Confira o código abaixo.</p>
+
+			<ul>
+				<li> if (keyIsDown(UP_ARROW)){</li>
+				<li> yRaquete -= 10;</li>
+				<li> }</li>
+				<li>  if (keyIsDown(DOWN_ARROW)){</li>
+				<li>   yRaquete += 10;</li>
+				<li>	}</li>
+				<li>   }</li>
+			</ul>
+
+			<p>Basicamente esse código está fazendo a pergunta. Se a tecla da flechinha para cima estiver apertada o y da raquete ira diminuir em 10, ou se a tecla da flechinha pra baixo estiver apertada o y da raquete ira aumentar em 10.</p>
+
+			<h6 class="titulo"><b class="cor">Parte 10.</b> <b class="cor2">Movimento da raquete inimiga.</b></h6>
+
+			<hr>
+			<img src="./assets/img/pingpong10.png" alt="">
+			<hr>
+
+			<p>O movimento da raquete inimiga é igual ao movimento da nossa raquete mas ao inves de colocar "UP_ARROW" e "DOWN_ARROW", vamos colocar 87 e 83, esses numeros são marcações que levam as teclas W e S do teclado. </p>
+
+			<ul>
+					<li>87= W</li>
+					<li>83= S</li>
+			</ul>
+
+			<h6 class="titulo"><b class="cor">Parte 11.</b> <b class="cor2">Upando arquivo do GitHub</b></h6>
+
+			<hr>
+
+			<p>Para fazer a colisão vamos pegar ajuda de um código feito por uma outra pessoa, para fazer isso entre no link Abaixo.</p>
+
+			<p><a href="https://github.com/bmoren/p5.collide2D">GitHub</a></p>
+
+			<p>Dentro do GitHub vamos baixar o conteúdo disponivel pelo criador do conteúdo</p>
+
+			<hr>
+			<img src="./assets/img/pingpong11.png" alt="">
+			<hr>
+
+			<p>Após baixar o conteúdo da página vamos extrair o que foi baixado.</p>
+
+			<img src="./assets/img/pingpong12.png" alt="">
+
+			<p>depois de extrair, vamos voltar ao p5.js. Clicando no > que está no canto superior esquerdo, nós iremos adicionar um arquivo especifico da pasta do GitHub no p5.js</p>
+
+			<img src="./assets/img/pingpong13.png" alt="">
+
+			<p>Agora é só arrastar o arquivo chamado p5.collide2d para o p5.js.</p>
+
+			<img src="./assets/img/pingpong14.png" alt="">
+
+			<p>Agora vamos no arquivo chamado index.html que está no canto superior esquerdo, na parte de baixo do código vai estar escrito <em>script src="sketch.js" script</em>, vamos criar mais um desse igual está escrito abaixo. </p>
+
+			<p> script src="p5.collide2d.js" script. Ele deve estar igual está na imagem abaixo. </p>
+
+			<img src="./assets/img/pingpong16.png" alt="">
+
+			<p>Agora vamos mexer no p5.collide2d que também está localizado no canto superior esquerdo, dentro dele vamos apagar console, como mostrado na imagem abaixo.</p>
+
+			<img src="./assets/img/pingpong17.png" alt="">
+
+			<p>Está feito, agora podemos começar a fazer a colisão da nossa raquete e da raquete do inimigo.</p>
+
+			<h6 class="titulo"><b class="cor">Parte 12.</b> <b class="cor2">Colisão das raquetes.</b> </h6>
+
+			<hr>
+			<img src="./assets/img/pingpong18.png" alt="">
+			<hr>
+
+			<p>Agora vamos criar a colisão das raquetes, primeiro vamos criar uma variável escrita desta forma: let colisão= false. após isso vamos criar uma função chamada colisãoRaquete e daí escreva o código citado abaixo.</p>
+
+			<ul>
+				<li> colisão =</li>
+				<li> collideRectCircle (xRaquete, yRaquete, larguraRaquete,	</li>
+				<li>alturaRaquete, xBolinha, yBolinha, raio);</li>
+				<li> if (colisão){</li>
+				<li>    velocidadeXBolinha *= -1;</li>
+				<li>	}</li>
+				<li>	}</li>
+			</ul>
+
+			<p>Para explicar o código, se a colisão for verdadeira a velocidade X da bolinha é multiplicada por 1 fazendo com que ela mude de direção. Para fazer com que a colisão pegue na raquete inimiga, vamos fazer uma nova função chamada colisãoRaqueteInimiga e vamos repetir o código e ao inves de xRaquete e yRaquete, iremos colocar o xRaqueteInimiga e yRaqueteInimiga.</p>
+
+			<img src="./assets/img/pingpong19.png" alt="">
+
+			<p>E depois disso é só colocarmos o nome da função dentro da função draw.</p>
+
+			<h6 class="titulo"><b class="cor">Parte 13.</b> <b class="cor2">Placares.</b></h6>
+
+			<hr>
+			<img src="./assets/img/pingpong20.png" alt="">
+			<hr>
+
+			<p>Agora vamos fazer as marcações de pontos do nosso jogo. Para começar vamos criar duas variáveis iguais como citadas abaixo.</p>
+
+			<ul>
+				<li>let pontos= 0;</li>
+				<li>let pontosInimigos= 0;</li>
+			</ul>
+
+			<p>Vamos criar mais uma função com o nome de placares, dentro dela vamos escrever o seguinte código:</p>
+
+			<ul>
+				<li> textAlign (CENTER);</li>
+				<li> textSize (16);</li>
+				<li>rect(180, 10 , 50, 25);</li>
+				<li>text(pontos, 205, 26);</li>
+				<li>  rect(360, 10 , 50, 25);</li>
+				<li>  text(pontosInimigos, 385, 26);</li>
+			</ul>
+
+			<p>Esse código é bem simples, explicando ele, o text align center serve para centralizar os nossos pontos, text size é para aumentar o tamanho da fonte, o rect é para criarmos um retangulo envolta dos pontos, e o text é para fazermos os pontos. Para finalizar a aparência dos nossos placares basta colocar o nome da função dentro da função draw.</p>
+
+			<h6 class="titulo"><b class="cor">Parte 14.</b> <b class="cor2">Marcação de pontos.</b> </h6>
+
+			<hr>
+			<img src="./assets/img/pingpong21.png" alt="">
+			<hr>
+
+			<p>Para finalizarmos nosso jogo falta apenas a marcação dos nossos pontos. O código da marcação é um código bem simples, para começar vamos fazer nossa ultima função, chamada marcação, dentro dela escreva o código abaixo.</p>
+
+			<ul>
+				<li> if (xBolinha > 590){</li>
+				<li>   pontos += 1      </li>
+				<li>	}</li>
+				<li>  if (xBolinha < 10){	</li>
+				<li>  pontosInimigos += 1</li>
+				<li>	}</li>
+			</ul>
+
+			<p>Traduzindo esse código é se o X da bolinha for maior que 585 vai adicionar 1 para os meus pontos, e se o X da bolinha for menor que 10 adicionar 1 para os pontos do inimigo.</p>
+
+			<hr>
+			<hr>
+
+			<section id="degrade">
+			<h6 class="titulo"><b class="cor">CONCL</b><b class="cor2">USÃO</b></h6>
+
+			<p>Muito obrigado se você lêu até aqui, espero que tenha conseguido entender e que tenha conseguido fazer o jogo do Ping Pong, caso tenha alguma duvida ou reclamação entre em contato com o nosso E-mail.</p>
+
+			<p>Email: ColdRosaContact@gmail.com</p>
+
+			<p id="final">Confira também:</p>
+			<p class="a"><a href="JogoCobrinha.html">Snake Game</a></p>
+			<p  class="a"> <a href="Site.html">Site</a></p>
+			</section>
+
+
+
+
+
+	</main>
+
+
+		<footer>
+		<img src="./assets/img/copyright-ping.png" alt="">
+		<p>&copy; Copyright ColdRosa - 2022</p>
+
+	</footer>
+
+
+</body>
+
+</html>

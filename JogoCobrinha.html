@@ -1,0 +1,429 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+	<meta charset="UTF-8">
+	<title>ColdRosa</title>
+	<link rel="stylesheet" href="./assets/css/JogoCobrinha.css">
+	<link rel="stylesheet" href="./assets/css/reset.css">
+	<link rel="preconnect" href="https://fonts.googleapis.com">
+</head>
+
+<body>
+	<header>
+		<h1><a href="index.html"><img src="./assets/img/Logo-cobrinha.png" alt="" ></a></h1>
+	</header>
+
+	<main>
+	<h2 class="titulo"><b class="cor">Jogo da</b> <b class="cor2">Cobrinha</b></h2>
+
+	<p>Vamos fazer o jogo da cobrinha, um jogo clássico que quase todo celular mais antigo deve ter, para isso nós iremos usar o Sublime Text 3, nele vamos usar o Html, CSS3 e p JavaScript.</p>
+
+	<h3 class="titulo"><b class="cor">Parte 1.</b> <b class="cor2">Primeiras tags.</b></h3>
+
+	<hr>
+	<img src="./assets/img/jogocobrinha1.png" alt="">
+	<hr>
+
+	<p>Para começarmos, vamos criar um novo arquivo e chama-lo de "snake-game.html", dentro desse arquivo vai ficar o nosso código. Como nós usaremos o JavaScript todas as tags devem ter a primeira palavra em letra minúscula e a segunda em letra maiúscula, por exemplo: snakeGame. </p>
+
+	<p>Agora para começar o código, vamos fazer a tag <em>Canvas</em>, o canvas é utilizado para criar a tela do nosso jogo, no canvas vamos criar um id chamado canvas e vamos colocar a largura e a altura dele em 400px.</p>
+
+	<p>< canvas id="canvas" width="400" height="400"></ canvas></p>
+
+	<p>Assim o campo onde vai acontecer nosso jogo vai ter uma largura de 400px e uma altura de 400px.</p>
+
+	<p>E para finalizar, logo abaixo do canvas vamos escrever a tag < script>, todo o conteúdo do nosso jogo vai ficar dentro dessa tag.</p>
+
+	<h4 class="titulo"><b class="cor">Parte 2.</b> <b class="cor2">Variáveis.</b></h4>
+
+	<hr>
+	<img src="./assets/img/jogoCobrinha2.png" alt="">
+	<hr>
+
+	<p>Dentro do Script nós vamos criar uma função utilizando o código abaixo.</p>
+
+	<p>window.onload = function(){</p>
+
+	<p>Assim, quando a página iniciar ele vai executar o que está dentro da função. E dentro dessa função nós iremos passar as informações do canvas.</p>
+
+	<ul>
+		<li>canvas = document.getElementById("canvas");</li>
+		<li>ctx = canvas.getContext('2d');</li>
+	</ul>
+
+	<p>Assim nosso canvas já está funcionando.</p>
+
+	<h5 class="titulo"><b class="cor">Parte 3.</b> <b class="cor2">Função do jogo.</b></h5>
+
+	<hr>
+	<img src="./assets/img/jogoCobrinha3.png" alt="">
+	<hr>
+
+	<p>Vamos criar uma nova função, que vai ser onde o nosso jogo vai funcionar.</p>
+
+	<p>function jogo(){</p>
+
+	<p>Dentro dessa função vai ser todo o código para fazer o nosso jogo funcionar, agora para ele ser executado nós iremos colocar essa função dentro da função que criamos acima, só que essa função vai carregar apenas uma vez assim que a página for carregada, então vamos usar a tag setInterval.</p>
+
+	<p>setInterval(jogo, 1000/10);</p>
+
+	<p>O setInterval serve para dar um intervalo de tempo para nosso jogo ser verificado, colocando 1000/10 significa que ele vai ser verificado de 1000 Milissegundos divididos por 10 a todo momento.</p>
+
+	<h6 class="titulo"><b class="cor">Parte 4.</b> <b class="cor2">Variáveis da cobrinha.</b></h6>
+
+	<hr>
+	<img src="./assets/img/jogoCobrinha4.png" alt="">
+	<hr>
+
+	<p>Para continuarmos o nosso jogo, primeiro precisamos das variáveis da nossa cobrinha, logo abaixo da função onload e acima da função do nosso jogo, vamos criar as seguintes variáveis.</p>
+
+	<ul>
+		<li>snake =[];</li>
+		<li>positionX = 10;</li>
+		<li>positionY = 10;</li>
+	</ul>
+
+	<p>Agora temos o tamanho da nossa cobrinha e a posição x e y dela, com as variáveis podemos começar o código do nosso jogo.</p>
+
+	<h6 class="titulo"><b class="cor">Parte 5.</b> <b class="cor2">Cor do campo de jogo.</b></h6>
+
+	<hr>
+	<img src="./assets/img/jogoCobrinha5.png" alt="">
+	<hr>
+
+	<p>Partindo para a função jogo, vamos fazer a cor de fundo do nosso canvas, para isso vamos colocar o código abaixo.</p>
+
+	<p>ctx.fillStyle = "#CCCCCC";</p>
+
+	<p>Pegamos o contexto que fizemos lá em cima e com a tag <em>fillStyle</em> e botamos ela na cor cinza.</p>
+
+	<p>E também vamos fazer o código abaixo.</p>
+
+	<p>ctx.fillRect(0, 0, canvas.width, canvas.height);</p>
+
+	<h6 class="titulo"><b class="cor">Parte 6.</b> <b class="cor2">Cobrinha.</b></h6>
+
+	<hr>
+	<img src="./assets/img/jogoCobrinha6.png" alt="">
+	<hr>
+
+	<p>Vamos fazer nossa cobrinha, para começar vamos criar uma nova variável, chamada grid que vai ser a grade do campo do nosso jogo.</p>
+
+	<p>grid = 20;</p>
+
+	<p>E vamos escrever o código abaixo.</p>
+
+	<ul>
+		<li>ctx.fillStyle = "black";</li>
+		<li>for (var i =0; i < snake.length; i++) {</li>
+			<li class="código">ctx.fillRect(snake[i].x, snake[i].x, grid -1, grid -1);</li>
+		<li>}</li>
+	</ul>
+
+	<p>Assim nós vamos pintar um quadradinho de preto que vai ser a nossa cobrinha, e com o ctx nós posicionamos o quadradinho da nossa cobrinha na grade do nosso jogo.</p>
+
+	<p>Para finalizar nós devemos trazer as variáveis do jogo para dentro da função jogo, então logo abaixo que acabamos de fazer nós iremos colocar o seguinte código.</p>
+
+	<p>snake.push({x: positionX, y: positionY});</p>
+
+	<p>Assim as nossas variáveis criadas vão ser puxadas para dentro da nossa função. E para finalizar nós iremos colocar * grid ao lado do snake[i].x e do snake[i].y ficando assim:</p>
+
+	<p>	ctx.fillRect(snake[i].x * grid, snake[i].y * grid, grid, grid);</p>
+
+	<h6 class="titulo"><b class="cor">Parte 7.</b> <b class="cor2">Movimento da cobrinha.</b></h6>
+
+	<hr>
+	<img src="./assets/img/jogoCobrinha7.png" alt="">
+	<hr>
+
+	<p>Para começar a fazer a movimentação da cobrinha, primeiro vamos fazer duas variáveis, uma para a velocidade X da cobrinha e outra para a velocidade Y da cobrinha.</p>
+
+	<ul>
+		<li>velX = 0;</li>
+		<li>velY = 0;</li>
+	</ul>
+
+	<p>Agora para a movimentação nós iremos usar a tag eventListener, mostrado abaixo. </p>
+
+	<p>document.addEventListener("keydown", function(e){</p>
+
+	<p>Com isso ele vai ouvir os eventos que acontecer, o evento que iremos fazer ele ouvir vai ser o apertar das teclas fazendo que a cobrinha se movimente assim que certa tecla for pressionada, para isso vamos fazer o código abaixo.</p>
+
+	<ul>
+			<li>switch(e.keyCode){</li>
+			<li>case 37:</li>
+			<li class="código">velX = -1;</li>
+			<li class="código">velY = 0;</li>
+			<li class="código">break;</li>
+			<li>case 38:</li>
+			<li class="código">velX = 0;</li>
+			<li class="código">velY = -1;</li>
+			<li class="código">break;</li>
+			<li>case 39:</li>
+			<li class="código">velX = 1;</li>
+			<li class="código">velY = 0;</li>
+			<li class="código">break;</li>
+			<li>case 40:</li>
+			<li class="código">velX = 0;</li>
+			<li class="código">velY = 1;</li>
+			<li class="código">break;</li>
+			<li>}</li>
+			<li>});</li>
+	</ul>
+
+	<p>A tag case significa que caso o "37" for pressionado a velocidade X da cobrinha vai ser -1. O número 37 equivale a flecha esquerda, ela é representada por key code, caso queira utilizar outra tecla para isso você pode visitar o site abaixo para ver os números dos key codes.</p>
+
+	<a  class="a" href="https://odesenvolvedor.com.br/tabela-de-key-codes-para-javascript_1464.html">Key Code.</a>
+
+	<p>Agora para fazer a nossa cobrinha de movimentar, dentro da função jogo acima de tudo vamos colocar o código:</p>
+
+	<ul>
+		<li>positionX += velX;</li>
+		<li>positionY += velY;</li>
+	</ul>
+
+	<p>Agora a movimentação está feita, porém a cobrinha não vai diminuir de tamanho, vamos arrumar isso na próxima parte.</p>
+
+	<h6 class="titulo"><b class="cor">Parte 8.</b> <b class="cor2">Tamanho da cobrinha.</b></h6>
+
+	<hr>
+	<img src="./assets/img/jogoCobrinha8.png" alt="">
+	<hr>
+
+	<p>Primeiro vamos criar a variável do tamanho da nossa cobrinha, vamos chama-la de tam para facilitar.</p>
+
+	<p>tam = 5;</p>
+
+	<p>Agora dentro da função jogo, logo abaixo de onde utilizado o snake.push, vamos colocar esse código:</p>
+
+	<ul>
+		<li>while(snake.length > tam){</li>
+			<li class="código">snake.shift();</li>
+		<li>}</li>
+	</ul>
+
+	<p>Com isso, quando o comprimeiro da cobrinha for maior que o tamanho ele vai tirar o ultimo quadradinho da cobrinha, fazendo com que ela não aumente infinitamente.</p>
+
+	<h6 class="titulo"><b class="cor">Parte 9.</b> <b class="cor2">Paredes.</b></h6>
+
+		<hr>
+		<img src="./assets/img/jogoCobrinha10.png" alt="">
+		<hr>
+
+		<p>Para fazer com que a cobrinha apareça do outro lado quando batemos em uma parede nós vamos fazer o código abaixo.</p>
+
+		<ul>
+			<li>if(positionX < 0){
+			<li class="código">positionX = grid;
+		<li>}
+
+		<li>if (positionX > grid) {
+		<li class="código">	positionX = 0;
+		<li>}
+
+		<li>if (positionY < 0) {
+		<li class="código">	positionY = grid;
+		<li>}
+
+		<li>if (positionY > grid) {
+		<li class="código">	positionY = 0;
+		<li>}
+
+		<li></ul>
+
+			<p>Isso faz que quando a posição X da cobrinha for menor que 0 então a posição X dela vai ser igual a posição da grade.</p>
+
+			<h6 class="titulo"><b class="cor">Parte 10.</b> <b class="cor2">Comida.</b></h6>
+
+			<hr>
+			<img src="./assets/img/jogoCobrinha11.png" alt="">
+			<hr>
+
+			<p>No nosso jogo ainda falta as maças para nossa cobrinha, para começar a fazer elas nós iremos criar 2 variáveis, uma chamada foodX e outra chamada foodY.</p>
+
+			<ul>
+				<li>foodX = 15;</li>
+				<li>foodY = 15;</li>
+			</ul>
+
+			<p>E para fazer essa comida aparecer no campo do nosso jogo vamos fazer o código abaixo.</p>
+
+			<ul>
+				<li>ctx.fillStyle = "red";</li>
+				<li>ctx.fillRect(foodX * grid, foodY * grid, grid -1, grid -1)</li>
+			</ul>
+
+			<p>Assim as maças do nosso jogo estarão pintadas e dentro do campo do nosso jogo.</p>
+
+			<h6 class="titulo"><b class="cor">Parte 11.</b> <b class="cor2">Aumentando a cobrinha</b></h6>
+
+			<hr>
+			<img src="./assets/img/jogoCobrinha12.png" alt="">
+			<hr>
+
+			<p>A comida já estão no jogo, mas se a cobrinha passar por cima não vai acontecer nada, para arrumarmos isso vamos fazer o seguinte código</p>
+
+			<ul>
+				<li>if(positionX == foodX && positionY == foodY){
+				<li class="código">tam++;
+				<li class="código">foodX = Math.floor(Math.random() * grid);
+				<li class="código">foodY = Math.floor(Math.random() * grid);
+			<li>}
+			</ul>
+
+			<p>Assim, se a posição X da cobrinha for igual a posição X da maça e a posição Y da cobrinha também for igual a posição Y da maça então a cobrinha vai aumentar de tamanho, e as tags math.floor servem para trocar a posição da maça depois dela ser pega pela cobrinha.</p>
+
+			<h6 class="titulo"><b class="cor">Parte 12.</b> <b class="cor2">Game Over</b></h6>
+
+			<hr>
+			<img src="./assets/img/jogoCobrinha13.png" alt="">
+			<hr>
+
+			<p>O nosso jogo já está praticamente pronto, mas ainda falta fazer um jeito de perder o jogo. Para isso vamos utilizar o código abaixo.</p>
+
+			<ul>
+				<li>if (snake[i].x == positionX && snake[i].y == positionY) {</li>
+				<li class="código">tam = 5;</li>
+			<li>}</li>
+			</ul>
+
+			<p>Assim, se a posição i.x da cobrinha for igual a posição x da cobrinha então o tamanho dela vai ser mudada pra 5, assim toda vez que a cobrinha encostar em si mesma o jogo vai ser reiniciado.</p>
+
+			<hr>
+			<hr>
+
+			<section>
+			<h6 class="titulo"><b class="cor">CONCL</b><b class="cor2">USÃO</b> </h6>
+
+			<p>O jogo da cobrinha já está praticamente pronto, é um jogo bem simples e divertido de fazer.</p>
+
+			<p>Muito obrigado se você lêu até aqui, espero que tenha conseguido entender e que tenha conseguido fazer o jogo, caso tenha alguma duvida ou reclamação entre em contato com o nosso E-mail.</p>
+
+			<p>Email: ColdRosaContact@gmail.com</p>
+
+			 <p>Confira também:</p>
+
+			 <a class="a" href="ping-pong.html">Ping-Pong</a>
+			 <a  class="a" href="Site.html">Site</a>
+			 </section>
+
+
+			 <p class="amostra">Se você seguir o tutorial acima o seu jogo ficará desse jeito:</p>
+
+
+	</main>
+
+		<section id="degrade">
+
+	<canvas id="canvas" width="400" height="400"></canvas>
+
+<script>
+	window.onload = function(){
+		canvas = document.getElementById("canvas");
+		ctx = canvas.getContext('2d');
+
+		document.addEventListener("keydown", function(e){
+			console.log(e.keyCode);
+			switch(e.keyCode){
+			case 65:
+				velX = -1;
+				velY = 0;
+				break;
+			case 87:
+				velX = 0;
+				velY = -1;
+				break;
+			case 68:
+				velX = 1;
+				velY = 0;
+				break;
+			case 83:
+				velX = 0;
+				velY = 1;
+				break;
+			}
+			});
+
+
+		setInterval(jogo, 1000/10);
+
+	}
+
+	snake =[];
+	positionX = 10;
+	positionY = 10;
+	foodX = 15;
+	foodY = 15;
+	velX = 0;
+	velY = 0;
+	grid = 20;
+	tam = 5;
+
+
+	function jogo (){
+		positionX += velX;
+		positionY += velY;
+
+		if(positionX < 0){
+			positionX = grid;
+		}
+
+		if (positionX > grid) {
+			positionX = 0;
+		}
+
+		if (positionY < 0) {
+			positionY = grid;
+		}
+
+		if (positionY > grid) {
+			positionY = 0;
+		}
+
+		ctx.fillStyle = "#CCCCCC";
+		ctx.fillRect(0, 0, canvas.width, canvas.height);
+
+		ctx.fillStyle = "black";
+		for (var i =0; i < snake.length; i++) {
+			ctx.fillRect(snake[i].x * grid, snake[i].y * grid, grid, grid);
+			if (snake[i].x == positionX && snake[i].y == positionY) {
+				tam = 5;
+			}
+
+		}
+
+		snake.push({x: positionX, y: positionY});
+
+		while(snake.length > tam){
+			snake.shift();
+		}
+
+		ctx.fillStyle = "red";
+		ctx.fillRect(foodX * grid, foodY * grid, grid -1, grid -1)
+
+		if(positionX == foodX && positionY == foodY){
+			tam++;
+			foodX = Math.floor(Math.random() * grid);
+			foodY = Math.floor(Math.random() * grid);
+		}
+}
+
+</script>
+
+</section>
+
+	<section id="parajogar">
+	<img src="./assets/img/Parajogar.png" alt="">
+	<p>Use para jogar.</p>
+	</section>
+
+	<footer>
+		<img src="./assets/img/copyright-cobrinha.png" alt="">
+		<p>&copy; Copyright ColdRosa - 2022</p>
+
+	</footer>
+
+
+</body>
+
+</html>

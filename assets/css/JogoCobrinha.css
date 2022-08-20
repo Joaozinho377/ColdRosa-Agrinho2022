@@ -1,0 +1,138 @@
+body {
+	font-family: 'Montserrat', sans-serif;
+	background: rgb(24, 24, 24);
+}
+
+main {
+	box-shadow: inset 10px 10px 20px #212121;
+}
+
+main .cor {
+	color: #ffaec8;
+}
+
+main .cor2 {
+ color: #8cfffb;
+
+}
+
+header {
+	background: rgb(33, 33, 33);
+}
+
+header img {
+	width: 35%;
+	height: 70%;
+	margin-left: 375px;
+}
+
+main .titulo {
+	color: #ffffff;
+	font-size: 25px;
+	padding: 30px 80px 30px;
+}
+
+main p {
+	text-align: justify;
+	color: #ffffff;
+	padding: 0px 40px 20px;
+	margin-right: 100px;
+	margin-left: 100px;
+	font-size: 20px;
+	padding-top: 20px;
+
+}
+
+ main hr {
+	width: 80%;
+	height: 3px;
+}
+
+main img {
+	width: 50%;
+	margin-left: 300px;
+}
+
+main em {
+	font-weight: bold;
+}
+
+main ul {
+
+	color: #ffffff;
+	padding: 0px 40px 20px;
+	margin-right: 100px;
+	margin-left: 100px;
+	font-size: 20px;
+
+}
+
+main li {
+	padding-top: 10px;
+}
+
+main .código {
+	padding-left: 30px;
+}
+
+
+
+main a {
+	margin-left: 150px;
+	font-weight: bold;
+	font-size: 20px;
+	color: #ffc0cb;
+	text-decoration: none;
+}
+
+a:hover {
+	content: "➔"
+}
+
+main .amostra {
+	padding-top: 40px;
+	font-size: 20px;
+	position: relative;
+	left: 330px;
+}
+
+
+
+canvas {
+	position: relative;
+	left: 425px;
+}
+
+
+#parajogar img {
+	width: 15%;
+	position: relative;
+	left: 525px;
+}
+
+#parajogar p {
+	color: #ffffff;
+	text-shadow: 2px 2px 10px #ffffff;
+	padding: 0px 40px 20px;
+	margin-right: 300px;
+	font-size: 17px;
+	padding-top: 20px;
+	margin-left: 525px;
+
+}
+
+footer {
+	background: rgb(33, 33, 33);
+}
+
+footer img {
+	padding-top: 50px;
+	width: 10%;
+	position: relative;
+	left: 550px;
+
+}
+
+footer p {
+	text-align: center;
+}
