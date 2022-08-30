@@ -44,6 +44,10 @@ main h2, main h3, main h4, main h5, main h6 {
 	content: "📚"
 }
 
+.principais {
+	border-radius: 10%;
+}
+
 #mensagem {	
 	position: relative;
 	left: 825px;
