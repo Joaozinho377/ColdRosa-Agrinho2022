@@ -3,6 +3,33 @@ body {
 	background: rgb(24, 24, 24);
 }
 
+nav{
+	position: absolute;
+	 top: 35px;
+	 right: 100px;
+   
+   }
+   
+   nav li {
+	   display: inline;
+	   margin: 0 0 0 15px;	
+   
+   
+   }
+   
+   nav a {
+	 text-transform: uppercase;
+	 color: #ffffff;
+	 font-weight: bold;
+	 font-size: 22px;
+	 text-decoration: none;
+   }
+   
+   nav a:hover {
+	   color: #FF00FF;
+	   text-decoration: underline;
+   }
+
 main {
 	box-shadow: inset 10px 10px 20px #212121;
 }
@@ -14,7 +41,7 @@ header {
 header img {
 	width: 35%;
 	height: 70%;
-	margin-left: 375px;
+	margin-left: 100px;
 }
 
 main .titulo {
@@ -50,6 +77,17 @@ main a {
 	font-weight: bold;
 	text-decoration: none;
 
+}
+
+#código1, #código2, #código3, #código4, #código5, #código6, #código7, #código8, #código9, #código10{
+	position: relative;
+left: 30px;
+display: inline-block;
+box-sizing: border-box;
+border: 2px solid rgb(40, 40, 40);
+padding: 10px;
+border-radius: 10px;
+background: rgb(24, 24, 24);
 }
 
 #celke {
