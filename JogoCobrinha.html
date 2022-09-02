@@ -10,7 +10,19 @@
 
 <body>
 	<header>
+		<div>
 		<h1><a href="index.html"><img src="./assets/img/Logo-cobrinha.png" alt="" ></a></h1>
+
+		<nav>
+            <ul>
+               <li><a href="index.html">página inicial</a></li>
+               <li><a href="Ping-pong.html">Ping-Pong</a></li>
+               <li><a href="JogoCobrinha.html">Snake Game</a></li>
+               <li><a href="Site.html">Site</a></li>
+            </ul>
+         </nav>
+      </div>
+
 	</header>
 
 	<main>
@@ -46,7 +58,7 @@
 
 	<p>Assim, quando a página iniciar ele vai executar o que está dentro da função. E dentro dessa função nós iremos passar as informações do canvas.</p>
 
-	<ul>
+	<ul id="código1">
 		<li>canvas = document.getElementById("canvas");</li>
 		<li>ctx = canvas.getContext('2d');</li>
 	</ul>
@@ -77,7 +89,7 @@
 
 	<p>Para continuarmos o nosso jogo, primeiro precisamos das variáveis da nossa cobrinha, logo abaixo da função onload e acima da função do nosso jogo, vamos criar as seguintes variáveis.</p>
 
-	<ul>
+	<ul id="código2">
 		<li>snake =[];</li>
 		<li>positionX = 10;</li>
 		<li>positionY = 10;</li>
@@ -113,7 +125,7 @@
 
 	<p>E vamos escrever o código abaixo.</p>
 
-	<ul>
+	<ul id="código3">
 		<li>ctx.fillStyle = "black";</li>
 		<li>for (var i =0; i < snake.length; i++) {</li>
 			<li class="código">ctx.fillRect(snake[i].x, snake[i].x, grid -1, grid -1);</li>
@@ -138,7 +150,7 @@
 
 	<p>Para começar a fazer a movimentação da cobrinha, primeiro vamos fazer duas variáveis, uma para a velocidade X da cobrinha e outra para a velocidade Y da cobrinha.</p>
 
-	<ul>
+	<ul id="código4">
 		<li>velX = 0;</li>
 		<li>velY = 0;</li>
 	</ul>
@@ -149,7 +161,7 @@
 
 	<p>Com isso ele vai ouvir os eventos que acontecer, o evento que iremos fazer ele ouvir vai ser o apertar das teclas fazendo que a cobrinha se movimente assim que certa tecla for pressionada, para isso vamos fazer o código abaixo.</p>
 
-	<ul>
+	<ul id="código5">
 			<li>switch(e.keyCode){</li>
 			<li>case 37:</li>
 			<li class="código">velX = -1;</li>
@@ -177,7 +189,7 @@
 
 	<p>Agora para fazer a nossa cobrinha de movimentar, dentro da função jogo acima de tudo vamos colocar o código:</p>
 
-	<ul>
+	<ul id="código6">
 		<li>positionX += velX;</li>
 		<li>positionY += velY;</li>
 	</ul>
@@ -196,7 +208,7 @@
 
 	<p>Agora dentro da função jogo, logo abaixo de onde utilizado o snake.push, vamos colocar esse código:</p>
 
-	<ul>
+	<ul id="código7">
 		<li>while(snake.length > tam){</li>
 			<li class="código">snake.shift();</li>
 		<li>}</li>
@@ -212,7 +224,7 @@
 
 		<p>Para fazer com que a cobrinha apareça do outro lado quando batemos em uma parede nós vamos fazer o código abaixo.</p>
 
-		<ul>
+		<ul id="código8">
 			<li>if(positionX < 0){
 			<li class="código">positionX = grid;
 		<li>}
@@ -241,7 +253,7 @@
 
 			<p>No nosso jogo ainda falta as maças para nossa cobrinha, para começar a fazer elas nós iremos criar 2 variáveis, uma chamada foodX e outra chamada foodY.</p>
 
-			<ul>
+			<ul id="código9">
 				<li>foodX = 15;</li>
 				<li>foodY = 15;</li>
 			</ul>
@@ -263,7 +275,7 @@
 
 			<p>A comida já estão no jogo, mas se a cobrinha passar por cima não vai acontecer nada, para arrumarmos isso vamos fazer o seguinte código</p>
 
-			<ul>
+			<ul id="código10">
 				<li>if(positionX == foodX && positionY == foodY){
 				<li class="código">tam++;
 				<li class="código">foodX = Math.floor(Math.random() * grid);
@@ -281,7 +293,7 @@
 
 			<p>O nosso jogo já está praticamente pronto, mas ainda falta fazer um jeito de perder o jogo. Para isso vamos utilizar o código abaixo.</p>
 
-			<ul>
+			<ul id="código11">
 				<li>if (snake[i].x == positionX && snake[i].y == positionY) {</li>
 				<li class="código">tam = 5;</li>
 			<li>}</li>

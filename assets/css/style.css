@@ -10,6 +10,33 @@ body {
 	background: var(--body-background);
 }
 
+nav{
+	position: absolute;
+	 top: 35px;
+	 right: 100px;
+   
+   }
+   
+   nav li {
+	   display: inline;
+	   margin: 0 0 0 15px;	
+   
+   
+   }
+   
+   nav a {
+	 text-transform: uppercase;
+	 color: #ffffff;
+	 font-weight: bold;
+	 font-size: 22px;
+	 text-decoration: none;
+   }
+   
+   nav a:hover {
+	   color: #FF00FF;
+	   text-decoration: underline;
+   }
+
 main {
 	box-shadow: inset 10px 10px 20px #212121;
 	background: var(--body-background)
@@ -24,6 +51,15 @@ main .cor2 {
 
 }
 
+.borda li {
+	box-sizing: border-box;
+	border: 2px solid rgb(40, 40, 40);
+	padding: 10px;
+	border-radius: 10px;
+	background: rgb(24, 24, 24);
+
+}
+
 header {
 	background: var(--header-background);
 }
@@ -31,7 +67,7 @@ header {
 header img {
 	width: 35%;
 	height: 70%;
-	margin-left: 375px;
+	margin-left: 100px;
 }
 
 main h2, main h3, main h4, main h5, main h6 {
@@ -44,11 +80,6 @@ main h2, main h3, main h4, main h5, main h6 {
 	content: "📚"
 }
 
-main .principais {
-	border-width: 10px;
-	border-color: #000000;
-	border-radius: 10%;
-}
 
 #mensagem {	
 	position: relative;
@@ -65,13 +96,13 @@ main .principais {
 }
 
 #agrinho2 {
-	width: 20%;
+	width: 30%;
 	float: right;
 	position: relative;
 	right: 150px;
-	bottom: 60px;
-
+	bottom: 30px;
 }
+
 
 main p  {
 	color: var(--body-color);
