@@ -10,7 +10,19 @@
 
 <body>
 	<header>
+		<div>
 		<h1 class="pingpong"><a href="index.html"><img src="./assets/img/Logo-ping.png" alt="" ></a></h1>
+
+		<nav>
+            <ul>
+               <li><a href="index.html">página inicial</a></li>
+               <li><a href="Ping-pong.html">Ping-Pong</a></li>
+               <li><a href="JogoCobrinha.html">Snake Game</a></li>
+               <li><a href="Site.html">Site</a></li>
+            </ul>
+         </nav>
+      </div>
+
 	</header>
 
 	<main>
@@ -65,7 +77,7 @@
 
 		<p>As variáveis são utilidades que vão ajudar a organizar o código e ficar mais fácil de ler, vamos trocar os numeros da bolinha por variáveis, para isso no topo do código vamos escrever <em>let</em> que é o que vai criar a variavel, aí o nome da variavel que vamos botar xBolinha (lembrando que a primeira letra sempre tem que ser em minúsculo), depois do nome precisa botar um = e o numero que foi posto no x da bolinha.</p>
 
-		<ul>
+		<ul id="código1">
 			<li>let xBolinha= 300;</li>
 			<li>let yBolinha= 165;</li>
 			<li>let diametro= 20;</li>
@@ -85,7 +97,7 @@
 
 		<p>Agora que foi explicado sobre as variáveis e a biblioteca, vamos para a movimentação da bolinha. Para fazer essa movimentação, vamos denovo criar uma função. Criando uma função e botando um nome nela, que no tutorial usaremos movimento, dentro dos {} colocaremos o X da bolinha + o quanto queremos que ela se movimente. Por exemplo:</p>
 
-		<ul>
+		<ul id="código2">
 			<li>xBolinha += 3;</li>
 			<li>yBolinha +- -3;</li>
 		</ul>
@@ -104,7 +116,7 @@
 
 		<p>Agora para começarmos vamos criar mais uma função, chamada colisao, e dentro dessa função nós vamos usar a tag <em>if</em>. Confira o código abaixo</p>
 
-		<ul>
+		<ul id="código3">
 			<li>  if (xBolinha + raio> width ||</li>
 			<li>  xBolinha - raio< 0){</li>
 			<li>  velocidadeXBolinha *= -1;</li>
@@ -132,7 +144,7 @@
 
 			<p>Para facilitar, vamos criar 4 variáveis, um para o X da raquete, um para o Y da raquete, um para a largura da raquete e mais um para a altura da raquete. pode ser colocado como citado abaixo.</p>
 
-			<ul>
+			<ul id="código4">
 				<li>let xRaquete= 3;</li>
 				<li>let yRaquete = 170;</li>
 				<li>let larguraRaquete= 10;</li>
@@ -170,7 +182,7 @@
 
 			<p>Agora vamos criar a movimentação da nossa raquete, vamos criar uma função chamada movimentoRaquete, e dentro dessa função iremos usar a tag if novamente e também a tag keyIsDown. Confira o código abaixo.</p>
 
-			<ul>
+			<ul id="código5">
 				<li> if (keyIsDown(UP_ARROW)){</li>
 				<li> yRaquete -= 10;</li>
 				<li> }</li>
@@ -241,7 +253,7 @@
 
 			<p>Agora vamos criar a colisão das raquetes, primeiro vamos criar uma variável escrita desta forma: let colisão= false. após isso vamos criar uma função chamada colisãoRaquete e daí escreva o código citado abaixo.</p>
 
-			<ul>
+			<ul id="código6">
 				<li> colisão =</li>
 				<li> collideRectCircle (xRaquete, yRaquete, larguraRaquete,	</li>
 				<li>alturaRaquete, xBolinha, yBolinha, raio);</li>
@@ -265,14 +277,14 @@
 
 			<p>Agora vamos fazer as marcações de pontos do nosso jogo. Para começar vamos criar duas variáveis iguais como citadas abaixo.</p>
 
-			<ul>
+			<ul id="código7">
 				<li>let pontos= 0;</li>
 				<li>let pontosInimigos= 0;</li>
 			</ul>
 
 			<p>Vamos criar mais uma função com o nome de placares, dentro dela vamos escrever o seguinte código:</p>
 
-			<ul>
+			<ul id="código8">
 				<li> textAlign (CENTER);</li>
 				<li> textSize (16);</li>
 				<li>rect(180, 10 , 50, 25);</li>
@@ -291,7 +303,7 @@
 
 			<p>Para finalizarmos nosso jogo falta apenas a marcação dos nossos pontos. O código da marcação é um código bem simples, para começar vamos fazer nossa ultima função, chamada marcação, dentro dela escreva o código abaixo.</p>
 
-			<ul>
+			<ul id="código9">
 				<li> if (xBolinha > 590){</li>
 				<li>   pontos += 1      </li>
 				<li>	}</li>
