@@ -52,6 +52,7 @@ main .cor2 {
 }
 
 .borda li {
+	display: inline-block;
 	box-sizing: border-box;
 	border: 2px solid rgb(40, 40, 40);
 	padding: 10px;
