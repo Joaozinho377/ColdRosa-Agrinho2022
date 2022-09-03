@@ -157,6 +157,10 @@ main a {
 	font-weight: bold;
 }
 
+main .link {
+	text-align: justify;
+}
+
 main .link:before {
 	content: "➔";
 }
